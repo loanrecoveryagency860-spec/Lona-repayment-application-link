@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.page {
+    width: 100%;
+    max-width: 680px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 74px;
+    background: #1688ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header-title {
+    color: white;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.demo-label {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 9px;
+    color: rgba(255,255,255,.75);
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer-section {
+    min-height: 73px;
+    padding: 20px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timer-label {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.timer span {
+    background: #2996e8;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 8px;
+    min-width: 34px;
+    text-align: center;
+}
+
+.timer b {
+    color: #777;
+}
+
+
+/* =========================
+   PAYMENT ROWS
+========================= */
+
+.payment-row {
+    min-height: 72px;
+    padding: 7px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-label {
+    font-size: 18px;
+    color: #444;
+}
+
+.row-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.amount-value {
+    font-size: 19px;
+}
+
+
+/* =========================
+   COPY BUTTON
+========================= */
+
+.copy-btn {
+    width: 92px;
+    height: 51px;
+    background: #fff;
+    border: 2px solid #8fc4d4;
+    border-radius: 7px;
+    color: #6895a2;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.copy-btn:active {
+    transform: scale(.96);
+    background: #f1faff;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 4px 13px 0;
+}
+
+
+/* =========================
+   HOW TO TRANSFER
+========================= */
+
+.how-title {
+    margin: 13px 13px 12px;
+    color: #4c93a5;
+    font-size: 17px;
+}
+
+.question {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #68a5b6;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.chain {
+    font-size: 18px;
+}
+
+
+/* =========================
+   PAYMENT APPS
+========================= */
+
+.apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 14px;
+}
+
+.app-btn {
+    height: 88px;
+    background: white;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+.app-btn:active {
+    transform: scale(.98);
+}
+
+
+/* PhonePe */
+
+.phonepe-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #6739b7;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Paytm */
+
+.paytm-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #0877c9;
+}
+
+
+/* Google Pay */
+
+.gpay-logo {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.gpay-logo .g {
+    font-weight: 800;
+}
+
+
+/* BHIM */
+
+.bhim-logo {
+    font-size: 27px;
+    font-weight: 800;
+    font-style: italic;
+    color: #777;
+}
+
+
+/* =========================
+   UTR
+========================= */
+
+.utr-heading {
+    margin: 15px 13px 8px;
+    color: #4d9aaa;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.utr-section {
+    display: flex;
+    align-items: center;
+    padding: 0 38px;
+    height: 52px;
+}
+
+.utr-label {
+    width: 70px;
+    font-size: 15px;
+    color: #333;
+}
+
+#utr {
+    flex: 1;
+    height: 44px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+#utr::placeholder {
+    color: #bbb;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-btn {
+    display: block;
+    width: calc(100% - 26px);
+    margin: 7px auto 13px;
+
+    height: 52px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #168ded;
+    color: white;
+
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    transform: scale(.99);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+#error {
+    text-align: center;
+    min-height: 20px;
+    color: #d33;
+    font-size: 14px;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice {
+    padding: 0 13px 18px;
+}
+
+.notice-title {
+    color: #d90000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.notice ol {
+    padding-left: 25px;
+}
+
+.notice li {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #333;
+}
+
+.notice strong {
+    color: #d60000;
+}
+
+
+/* =========================
+   BOTTOM LOGOS
+========================= */
+
+.bottom-logos {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-top: 1px solid #eee;
+    margin-top: 4px;
+}
+
+.bottom-phonepe {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background: #6739b7;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.bottom-google {
+    color: #2f7de1;
+    font-size: 25px;
+}
+
+.bottom-paytm {
+    font-size: 10px;
+    font-weight: 700;
+    color: #1474bd;
+}
+
+.bottom-upi {
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    color: #555;
+}
+
+
+/* =========================
+   DEMO MESSAGE
+========================= */
+
+.demo-message {
+    text-align: center;
+    font-size: 14px;
+    min-height: 20px;
+    padding: 0 10px 8px;
+    color: #1688ed;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 10px;
+    color: #999;
+    border-top: 1px solid #eee;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+    .header {
+        height: 58px;
+    }
+
+    .header-title {
+        font-size: 23px;
+    }
+
+    .timer-section {
+        padding-top: 16px;
+    }
+
+    .timer-label {
+        font-size: 15px;
+    }
+
+    .row-label {
+        font-size: 16px;
+    }
+
+    .row-value {
+        font-size: 16px;
+    }
+
+    .copy-btn {
+        width: 88px;
+        height: 49px;
+        font-size: 15px;
+    }
+
+    .app-btn {
+        height: 80px;
+        font-size: 18px;
+    }
+
+    .utr-heading {
+        font-size: 15px;
+    }
+}
