@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment - Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- Blue Header -->
+    <header class="header">
+        <div class="header-title">Payment</div>
+        <div class="demo-label">DEMO</div>
+    </header>
+
+
+    <!-- Order Timer -->
+    <section class="timer-section">
+
+        <div class="timer-label">
+            Order will be closed in:
+        </div>
+
+        <div class="timer" id="timer">
+            <span id="minutes">09</span>
+            <b>:</b>
+            <span id="seconds">53</span>
+        </div>
+
+    </section>
+
+
+    <!-- Amount -->
+    <section class="payment-row">
+
+        <div class="row-label">
+            Amount
+        </div>
+
+        <div class="row-value amount-value">
+            <span>₹ 12400</span>
+
+            <button
+                class="copy-btn"
+                onclick="copyText('12400', this)"
+            >
+                COPY
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- UPI -->
+    <section class="payment-row">
+
+        <div class="row-label">
+            VPA/UPI ID
+        </div>
+
+        <div class="row-value">
+
+            <span id="upi">
+                Q04553****@ybl
+            </span>
+
+            <button
+                class="copy-btn"
+                onclick="copyText('Q04553****@ybl', this)"
+            >
+                COPY
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+
+    <!-- How To Transfer -->
+    <div class="how-title">
+        <span class="question">?</span>
+        How to transfer money
+        <span class="chain">↗</span>
+    </div>
+
+
+    <!-- Payment Apps -->
+    <section class="apps">
+
+        <button
+            class="app-btn"
+            onclick="demoPayment('PhonePe')"
+        >
+            <span class="phonepe-logo">P</span>
+            <span>PhonePe</span>
+        </button>
+
+
+        <button
+            class="app-btn"
+            onclick="demoPayment('Paytm')"
+        >
+            <span class="paytm-logo">Paytm</span>
+        </button>
+
+
+        <button
+            class="app-btn"
+            onclick="demoPayment('Google Pay')"
+        >
+            <span class="gpay-logo">
+                <span class="g">G</span>
+                Pay
+            </span>
+        </button>
+
+
+        <button
+            class="app-btn"
+            onclick="demoPayment('BHIM')"
+        >
+            <span class="bhim-logo">
+                BHIM
+            </span>
+        </button>
+
+    </section>
+
+
+    <!-- UTR -->
+    <div class="utr-heading">
+        ↓ Fill the UTR numbers after you done payment
+    </div>
+
+
+    <section class="utr-section">
+
+        <div class="utr-label">
+            UTR
+        </div>
+
+        <input
+            type="text"
+            id="utr"
+            maxlength="11"
+            inputmode="numeric"
+            placeholder="Input UTR number"
+            autocomplete="off"
+        >
+
+    </section>
+
+
+    <!-- Submit -->
+    <button
+        class="submit-btn"
+        onclick="submitUTR()"
+    >
+        Submit UTR
+    </button>
+
+
+    <div id="error"></div>
+
+
+    <!-- Notice -->
+    <section class="notice">
+
+        <div class="notice-title">
+            Notice:
+        </div>
+
+        <ol>
+            <li>
+                One UPI can only transfer money
+                <strong>once.</strong>
+            </li>
+
+            <li>
+                Don't change the
+                <strong>payment amount.</strong>
+                Otherwise, the order cannot be closed.
+            </li>
+        </ol>
+
+    </section>
+
+
+    <!-- Bottom Logos -->
+    <div class="bottom-logos">
+
+        <span class="bottom-phonepe">P</span>
+
+        <span class="bottom-google">
+            ◆
+        </span>
+
+        <span class="bottom-paytm">
+            Paytm
+        </span>
+
+        <span class="bottom-upi">
+            UPI
+        </span>
+
+    </div>
+
+
+    <!-- Demo Message -->
+    <div
+        class="demo-message"
+        id="demoMessage"
+    ></div>
+
+
+    <footer>
+        DEMO / TEST PAYMENT INTERFACE
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
